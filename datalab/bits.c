@@ -232,7 +232,12 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-	return 2;
+	
+	int flag_x = (x >> 31) & 1;
+	int flag_y = (y >> 31) & 1;
+	int flag = flag_x ^ flag_y;
+
+	return (!((y + (~x + 1)) >> 31 & 1) & !flag) | (flag & (flag_x & 1) & (!flag_y & 0);
 }
 //4
 /* 
