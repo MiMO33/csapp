@@ -232,12 +232,12 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-	
+
 	int flag_x = (x >> 31) & 1;
 	int flag_y = (y >> 31) & 1;
 	int flag = flag_x ^ flag_y;
 
-	return (!((y + (~x + 1)) >> 31 & 1) & !flag) | (flag & (flag_x & 1) & (!flag_y & 0);
+	return (!((y + (~x + 1)) >> 31 & 1) & !flag) | (flag & (flag_x & 1) & (!flag_y & 0));
 }
 //4
 /* 
@@ -249,7 +249,10 @@ int isLessOrEqual(int x, int y) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
-	return 2;
+
+	x |= ~x + 1;
+	x |= x >> 31;
+	return x + 1;
 }
 /* howManyBits - return the minimum number of bits required to represent x in
  *             two's complement
@@ -279,7 +282,11 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-	return 2;
+
+	unsigned int exp = uf & 0x7f800000;
+	exp = (exp >> 22 + 1) << 22;
+	uf = uf | exp; 
+	return uf;
 }
 /* 
  * floatFloat2Int - Return bit-level equivalent of expression (int) f
