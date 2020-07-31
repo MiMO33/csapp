@@ -1,0 +1,12 @@
+<phase_2+27>   mov    -0x4(%rbx),%eax
+<phase_2+30>   add    %eax,%eax
+<phase_2+32>   cmp    %eax,(%rbx)
+<phase_2+34>   je     0x400f25 <phase_2+41>
+<phase_2+36>   callq  0x40143a <explode_bomb>
+<phase_2+41>   add    $0x4,%rbx
+<phase_2+45>   cmp    %rbp,%rbx
+<phase_2+48>   jne    0x400f17 <phase_2+27>
+<phase_2+50>   jmp    0x400f3c <phase_2+64>
+<phase_2+52>   lea    0x4(%rsp),%rbx
+<phase_2+57>   lea    0x18(%rsp),%rbp
+<phase_2+62>   jmp    0x400f17 <phase_2+27>

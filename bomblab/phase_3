@@ -1,0 +1,25 @@
+0x400f71 <phase_3+46>   mov    0x8(%rsp),%eax
+0x400f75 <phase_3+50>   jmpq   *0x402470(,%rax,8)
+0x400f7c <phase_3+57>   mov    $0xcf,%eax               207
+0x400f81 <phase_3+62>   jmp    0x400fbe <phase_3+123>
+0x400f83 <phase_3+64>   mov    $0x2c3,%eax              707
+0x400f88 <phase_3+69>   jmp    0x400fbe <phase_3+123>
+0x400f8a <phase_3+71>   mov    $0x100,%eax              256
+0x400f8f <phase_3+76>   jmp    0x400fbe <phase_3+123>
+0x400f91 <phase_3+78>   mov    $0x185,%eax              389
+0x400f96 <phase_3+83>   jmp    0x400fbe <phase_3+123>
+0x400f98 <phase_3+85>   mov    $0xce,%eax               206
+0x400f9d <phase_3+90>   jmp    0x400fbe <phase_3+123>
+0x400f9f <phase_3+92>   mov    $0x2aa,%eax              682
+0x400fa4 <phase_3+97>   jmp    0x400fbe <phase_3+123>
+0x400fa6 <phase_3+99>   mov    $0x147,%eax              327
+0x400fab <phase_3+104>  jmp    0x400fbe <phase_3+123>
+0x400fad <phase_3+106>  callq  0x40143a <explode_bomb>
+0x400fb2 <phase_3+111>  mov    $0x0,%eax
+0x400fb7 <phase_3+116>  jmp    0x400fbe <phase_3+123>
+0x400fb9 <phase_3+118>  mov    $0x137,%eax
+0x400fbe <phase_3+123>  cmp    0xc(%rsp),%eax
+0x400fc2 <phase_3+127>  je     0x400fc9 <phase_3+134>
+0x400fc4 <phase_3+129>  callq  0x40143a <explode_bomb>
+0x400fc9 <phase_3+134>  add    $0x18,%rsp
+0x400fcd <phase_3+138>  retq
