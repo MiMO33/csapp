@@ -1,0 +1,18 @@
+A[T]:anyone is Tmin
+     x is -1 y is Tmin
+     (x < y) is false(0)
+     (-x > -y) -> (1 > Tmin) -> 1
+     0 != 0 -> 0
+
+B[T]:right: 17 * y = y << 4 + y,
+            15 * x = x << 4 - x,
+            =((x + y) << 4) + y - x
+
+C[T]:left: [Tmin << 1 - (x + y) + 1] = Tmin - (x + y)
+     right:[Tmin - (x + y)]
+
+D[T]
+
+E[T]:x >> 2 = x / 2 - x % 2 (/ is the math division)
+     << 2 = *2
+     so. ((x >> 2) << 2) <= x
