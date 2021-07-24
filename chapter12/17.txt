@@ -1,0 +1,2 @@
+1.main 线程不等待其它线程
+2.pthread_exit
