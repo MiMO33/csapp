@@ -1,0 +1,14 @@
+def f(m:int, C:int, B:int, E:int):
+    S = C / E / B
+    s = math.log(S, 2)
+    b = math.log(B, 2)
+    t = m - (s+b)
+    print(f"{S} {t} {s} {b}")
+
+
+64  24 6 2
+1   30 0 2
+128 22 7 3
+1   29 0 3
+32  22 5 5
+8   24 3 5
